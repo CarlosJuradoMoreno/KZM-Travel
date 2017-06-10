@@ -1,0 +1,11 @@
+  <div class="registro">
+  <form>
+    <label>Email</label>
+    <input type="email" class="form-control" #email required>
+    <label>Password</label>
+    <input type="password" class="form-control" #password required>
+    <label>Telefono</label>
+    <input type="text" class="form-control" #telefono required>
+    <button class="btn btn-default enviar"(click)="registrarUsuario(email.value, password.value, telefono.value)">Registrate</button>
+  </form>
+  </div>

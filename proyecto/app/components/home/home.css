@@ -1,0 +1,14 @@
+#background-logo{
+    background-image: url("./app/img/logo.png");
+    height: 400px;
+    width: 100%;
+}
+.navegation-div{
+  padding: 25px
+}
+.navegation{
+  z-index: 10;
+}
+.viajes{
+  z-index: -1;
+}

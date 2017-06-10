@@ -1,0 +1,35 @@
+.form-div{
+  width: 25%;
+  margin: 50px auto;
+  background-color: #97d7d9;
+    border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+.form-div button{
+  display: inline;
+  margin: 5px 20%;
+}
+.form-div .form-div-padding{
+  padding: 5px;
+}
+.buttons{
+  padding-left: 30%;
+}
+@media only screen and (max-width: 1000px) {
+    .buttons{
+      padding-left: 20%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .buttons{
+      padding-left: 10%;
+    }
+}
+@media only screen and (max-width: 100px) {
+    .buttons{
+      padding-left: 0%;
+    }
+}

@@ -1,0 +1,49 @@
+<div *ngIf="ready && !isEditing" >
+  <div id="table-div">
+<table class="table table-striped table-hover border" id="usersTable">
+<thead>
+    <tr class="table-heading ">
+        <th>Email</th>
+        <th>Password</th>
+        <th>Tipo</th>
+        <th>Telefono</th>
+        <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of array | paginate: itemsPerPage: currentPage; let i = index" id=row{{item.ID}}>
+          <td>{{item.EMAIL}}</td>
+          <td>{{item.PASSWORD}}</td>
+          <td>{{item.TIPO}}</td>
+          <td>{{item.TELEFONO}}</td>
+          <td><img src="./app/img/delete.png" class="delete" (click)="delete(item.ID)">
+            <img src="./app/img/edit.png" class="edit" (click)="edit(item.ID)">
+          </td>
+      </tr>
+      <tr id="pagination-row">
+        <td>
+          <ul class="pagination">
+            <li *ngFor="let item of  paginationButtons; let i = index">
+              <button class="btn" (click)="setPagination(i)">{{i+1}}</button>
+            </li>
+          </ul>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</div>
+
+<div *ngIf="isEditing">
+  <updateUser [id]=updateID (isEditing)="handleUserUpdated($event)"></updateUser>
+</div>

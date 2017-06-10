@@ -1,0 +1,21 @@
+<div *ngIf="ready">
+
+<div class="form-group form-div">
+  <form class="form-div-padding">
+    <div class="form-group"><label>Email: </label><input type="email" class="form-control" [value]=array[0].EMAIL #userInput/></div>
+    <div class="form-group"><label>Password: </label><input type="text" class="form-control" [value]=array[0].PASSWORD #passInput/></div>
+    <div class="form-group"><label>Tipo: </label><input type="text" class="form-control" [value]=array[0].TIPO #tipoInput/></div>
+    <div class="form-group"><label>Telefono: </label><input type="text" class="form-control" [value]=array[0].TELEFONO #telefonoInput/></div>
+
+    <div class="buttons">
+    <table >
+      <tr class="buttons">
+        <td><button class="btn btn-primary "(click)="updateUser(userInput.value,passInput.value,tipoInput.value,telefonoInput.value)">Edit</button></td>
+        <td><button class="btn btn-default " (click)="exit()">Cancel</button></td>
+      </tr>
+    </table>
+    </div>
+  </form>
+  <div *ngIf="fail" class="error">Fail trying to Update</div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+#navbar-form{
+	float:right;
+	padding:5px
+}
+#navbar-admin{
+	color: #caa205;
+}
+#navbar-admin:hover{
+	color: white;
+	text-decoration: none;
+}
+#navbar{
+	position: fixed;
+	width: 100%;
+	height:0px;
+	z-index: 1000;
+}
+.nav-user{
+	color: #C0C0C0;
+	margin: 7px 0px 0 0;
+	float: right;
+}
+.error{
+	color:red;
+}
+.navbar-nav a{
+	cursor: pointer;
+}
+.responsive-text{
+	display: none;
+}
+.login{
+	display: none;
+}
+@media (max-width: 800px) {
+  #navbar-form{
+
+  }
+  .login{
+	  display: initial;
+  }
+  .navbar-nav a{
+	  font-size: 16px;
+  }
+  .navbar-nav li{
+	  display: inline-block;
+  }
+
+}

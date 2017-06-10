@@ -1,0 +1,15 @@
+<div id="admin-background">
+<div class="relleno"><a href="./home"> <button class="btn btn-danger" >Main Page</button></a></div>
+<div *ngIf=!checked class="background">
+  <div class="form-group form-div">
+    <form id="login-form" action="">
+      <input class="form-control" type="text" [value]="email" #userInput/>
+      <input class="form-control" type="password" [value]="pass" #passInput/>
+      <button type="button" class="btn-primary btn" value="" (click)="checkUser(userInput.value,passInput.value)">Log In</button>
+    </form>
+    <div *ngIf=fail class="error">Incorrect pass or user</div>
+  </div>
+</div>
+
+<usersTable *ngIf=checked></usersTable>
+</div>

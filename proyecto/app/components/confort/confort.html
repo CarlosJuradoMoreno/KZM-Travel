@@ -1,0 +1,86 @@
+<div>
+    <div class="confort-section1">
+        
+        <div class="botones">
+            <button (click)=reiniciar() *ngIf="contador>2" class="btn btn-primary">Reiniciar</button>
+            <button (click)=skipIntro() class="btn btn-primary">Saltar Intro</button>
+        </div>
+        <div class="confort-text" *ngIf="!finAnimacion">{{texto}}</div>  
+        
+        <div class="formulario form" *ngIf="finAnimacion && confortEncontrado==false">
+            <div class="formulario-content">
+            <div class="form-group">
+                <label>Introduzca una ciudad de salida</label>
+                <input type="text" class="form-control" [value]="salida" #salidaSeleccionada/>
+            </div>
+            <div class="form-group">
+                <label>Introduzca la cantidad maxima que te gastarias</label>
+                <input class="form-control" type="number" [value]="cantidadMaxima" #cantidadMaxima/>
+            </div>
+            <button class="form-control btn-default" (click)="guardaDatos(salidaSeleccionada.value,cantidadMaxima.value)">Buscar</button>
+            <div class="error" *ngIf="errorCantidad">Inserte una cantidad adecuada</div>
+            <div class="error" *ngIf="errorBusqueda">No se ha encontrado una zona con los datos proporcionados</div>
+            </div>
+         </div>
+
+         <div class="reserva" *ngIf="confortEncontrado && resultadoReserva==false && finAnimacion">
+            <div class="titulo">
+                Enhorabuena, hemos encontrado una nueva zona de confort para tí
+            </div>
+            <div class="texto">
+               <h3>Salida:</h3> {{provider[0].SALIDA}}
+            </div>
+            <div class="texto">
+              <h3> Destino:</h3> {{provider[0].DESTINO}}
+            </div>
+            <div class="texto">
+              <h3> Precio:</h3> {{provider[0].PRECIO}}€
+            </div>
+            <textarea rows="4" cols="50" maxlength=200 placeholder="Añade alguna nota" #notas></textarea>
+            <br>
+            <button  class="btn btn-default reserva-button" (click)="reservaConfort(provider[0], notas.value)">Reservar</button>
+            <button  class="btn btn-default reserva-button" (click)="reiniciarBusqueda()">Volver a buscar</button>
+            <div *ngIf="errorNoLogeado" class="error no-log">Porfavor, antes de reservar, inicie sesion</div>
+         </div>
+
+         <div *ngIf="resultadoReserva" class="listadoReservas">
+           <h4> Gracias por hacer la reserva, esperamos que disfrutes de tu nueva zona.
+            Aqui tienes tus reservas:</h4>
+            <div *ngIf="listadoReservasReady" >
+                <table class="table table-hover border">
+                    <thead>
+                        <tr class="table-heading">
+                            <th>Salida</th>
+                            <th>Destino</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listadoReservas" id=row{{item.ID}}>
+                            <td>{{item.SALIDA}}</td>
+                            <td>{{item.DESTINO}}</td>
+                            <td>{{item.PRECIO}}</td>
+                        </tr>
+                    </table>
+            </div>
+         </div>
+    </div>
+
+</div>
+<div id="confort-footer">
+<footer></footer>
+</div>
+
+
+<!--
+    <div class="seleccion" >
+        <div class="form-group" >
+            <label for="sel1">Select list:</label>
+            <input [(ngModel)]="stringToFilter"/>
+            <select class="form-control">
+                <option *ngFor="let item of provider| filter: stringToFilter: selectReady; let i = index">{{item.SALIDA}}</option>              
+            </select>
+        </div>
+    </div>
+
+    -->

@@ -1,0 +1,30 @@
+<div id="navbar">
+  <div class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a (click)="toViajes()">KZM-Viajes</a></li>
+        <li><a (click)="toConfort()">Zona de confort</a></li>
+        <li><a class="login" (click)="seeLogin()">Login</a></li>
+      </ul>
+      <div id="navbar-form" *ngIf="!checked && loginVisible">
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email" #emailInput [value]="email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" #passInput [value]="pass">
+          </div>
+          <button type="submit" class="btn btn-default"(click)="toLogIn(emailInput.value,passInput.value)">LogIn</button>
+          <button type="submit" class="btn btn-default"(click)="registrate()">Registrate</button>
+          </form>
+          <div *ngIf="fail" class="error">Incorrect Email or Password</div>
+        </div>
+        <div *ngIf="checked" class="nav-user">
+          Welcome {{user[0].EMAIL}}
+          <button class="btn btn-default"(click)="logOut()">Log Out</button>
+        </div>
+
+      </div>
+    <registro *ngIf="registrateReady && checked==false" (registrado)="comprobarSesion()"></registro>
+    </div>
+  </div>

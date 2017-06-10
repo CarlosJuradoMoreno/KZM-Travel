@@ -1,0 +1,143 @@
+.confort-section1{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./app/img/confort/img-confort4.jpeg');
+    background-size: cover;
+    position: relative;
+}
+.confort-text{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    top: 40%;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 1px black;
+    font-family: 'Open Sans', sans-serif;
+    animation: fades 5s 5;           /**Setear el numero de repeticiones igual al numero de divs, y el tiempo de animacion igual al tiempo de delay**/
+}
+#confort-footer{
+ position: relative;
+}
+
+@keyframes fades{
+
+ 0% {
+   opacity:0;
+ }
+  50% {
+    opacity:1;
+  }
+  100% {
+     opacity:0;
+  }
+}
+
+.formulario{
+    width:30%;
+    height: 40%;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 10px;
+    top: 30%;
+    left: 35%;
+    position: absolute;
+    z-index: 100;
+    color:white;
+}
+.formulario-content{
+    padding:10% 2% 0 2%;
+
+}
+.error{
+    font-weight: bold;
+    color: red;
+}
+textarea {
+    resize: none;
+}
+.listadoReservas{
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    width:40%;
+    top:5%;
+    left: 30%;
+     border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    color: white;
+}
+.listadoReservas h4{
+    margin: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+.botones{
+    float:right;
+}
+
+.reserva{
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+     position: absolute;
+    width:40%;
+    top:10%;
+    left: 30%;
+     border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.reserva .titulo{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 5px;
+}
+.reserva textarea{
+    width:100%;
+}
+.reserva .texto{
+    margin: 5px;
+    font-size: 16px;
+}
+.reserva .texto h3{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.reserva-button{
+margin: 5px;
+}
+
+
+@media (max-width: 800px) {
+
+    .confort-text{
+        top:30%
+    }
+
+    .formulario{
+        width: 80%;
+        left: 10%;
+    }
+    .reserva{
+        width: 80%;
+        left: 10%; 
+    }
+    .listadoReservas{
+        width: 80%;
+        left: 10%; 
+        top:10%; 
+    }
+
+}

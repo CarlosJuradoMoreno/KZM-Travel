@@ -1,0 +1,75 @@
+.map{
+  float: right;
+  width: 40%;
+  height: inherit;
+}
+.foot{
+  background-color: #A0A0A0;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+.foot-elements{
+  height: inherit;
+}
+
+.foot-elements #enlaces{
+  width: 10%;
+}
+.foot-elements #map{
+  width: 50%;
+}
+.foot-elements #mas-datos{
+  width: 40%;
+  left: 15%;
+}
+
+.enlaces{
+  position: absolute;
+  z-index: 100;
+}
+.enlaces p{
+  z-index: 100;
+  position: relative;
+  padding-top: 10%;
+  left: 25%;
+}
+
+.enlaces img{
+  max-width: 50px;
+  max-height: 50px;
+}
+.mas-datos{
+   position: absolute;
+   z-index: 100;
+   left: 30%;
+   color: white;
+}
+.mas-datos .row{
+  padding-top:5px;
+}
+.mas-datos .contenido div{
+  padding-top:5px;
+  font-style: italic;
+}
+.mas-datos .main{
+  padding-top:5%;
+  font-style: bold;
+  font-size: 1.5em;
+  padding-bottom: 5%;
+}
+.mas-datos p{
+  font-style: none;
+}
+
+
+@media (max-width: 600px) {
+  .foot-elements #map{
+    visibility: hidden;
+  }
+  .foot-elements #mas-datos{
+  width: 40%;
+  left: 45%;
+  }
+}
+

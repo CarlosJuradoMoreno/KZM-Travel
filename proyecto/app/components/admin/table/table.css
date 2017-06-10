@@ -1,0 +1,18 @@
+#usersTable{
+  margin: 0 auto;
+  width: 75%;
+  background-color: #97d7d9;
+    border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.delete:hover{
+  border: 1px solid black;
+}
+.edit:hover{
+  border: 1px solid black;
+}
+#pagination-row{
+  background-color: #97d7d9;
+}
