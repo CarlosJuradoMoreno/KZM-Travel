@@ -7,5 +7,5 @@ DOCUMENTACION
 <a href="http://kzmtravel.esy.es/proyecto/documentacion/ProyectoDAW-CarlosJurado-Def.pdf" title="Documentacion">http://kzmtravel.esy.es/proyecto/documentacion/ProyectoDAW-CarlosJurado-Def.pdf</a>
 
 ADMINISTRACION
-<a href="http://kzmtravel.esy.es/proyecto/admin" title="Documentacion"http://kzmtravel.esy.es/proyecto/admin</a>
+<a href="http://kzmtravel.esy.es/admin" title="Documentacion">http://kzmtravel.esy.es/admin</a>
 
