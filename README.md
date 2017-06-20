@@ -5,6 +5,9 @@ This repository contains the code for KZM-Travel web Application, it also contai
 
 DOCUMENTACION
 <a href="http://kzmtravel.esy.es/proyecto/documentacion/ProyectoDAW-CarlosJurado-Def.pdf" title="Documentacion">http://kzmtravel.esy.es/proyecto/documentacion/ProyectoDAW-CarlosJurado-Def.pdf</a>
+Acceso a la documentacion
+user: carlos
+Pass: carlos
 
 ADMINISTRACION
 <a href="http://kzmtravel.esy.es/admin" title="Documentacion">http://kzmtravel.esy.es/admin</a>
